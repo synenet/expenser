@@ -12,14 +12,14 @@ function updateEuros(value){
            // alert(json.rates.GBP * value);
            // return  (json.rates.GBP * value)     
             
-            converted = json.rates.GBP * value 
+            converted = Math.round(Json.rates.GBP * value )
 
             console.log(converted)
 
             $('#textValue').val(converted)
 
             //returns the round-up rate of conversion
-            $('.desc').html("<p>*Converted Value at a rate of 1 : " + Math.round(json.rates.GBP) +"</p>")
+            $('.desc').html("<p>*Converted Value at a rate of 1 : " +json.rates.GBP +"</p>")
 
             $('')
 
