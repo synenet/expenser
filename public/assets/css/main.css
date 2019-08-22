@@ -1,0 +1,24 @@
+body{
+    background: url('../img/back.png') #182567 !important;
+    color:#f4f4f4
+}
+
+.content2{
+    margin-top:100px;
+}
+
+.header{
+    /* height: 800px; */
+    vertical-align: middle;
+    padding: 50px auto
+}
+
+.header p {
+    line-height: 25px;
+    font-size: 1.1em;
+    color: #86a0ec
+}
+
+section{
+    margin: 100px 40px
+}
