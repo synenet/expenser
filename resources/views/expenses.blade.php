@@ -54,7 +54,7 @@
                 </table>
 
                 @else
-                <p>There are no expenses yet. Seems you've got all the cash well stacked</p>
+                <p class="p-4">There are no expenses yet. Seems you've got all the cash well stacked</p>
 
                 @endif
             </div>
