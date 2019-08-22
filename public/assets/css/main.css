@@ -1,4 +1,4 @@
-body{
+.body{
     background: url('../img/back.png') #182567 !important;
     color:#f4f4f4
 }
@@ -22,3 +22,17 @@ body{
 section{
     margin: 100px 40px
 }
+
+.color-blue-light {
+    background: #031f31;
+    color: #fff;
+}
+
+nav{
+    margin-top:30px
+}
+
+.welcome{
+    background: url('../img/back.png') !important;
+}
+

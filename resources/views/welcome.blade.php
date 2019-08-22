@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     @include('templates.head')
-    <body>
+    <body class="body">
         <div class="flex-center position-ref full-height">
            
             <nav class="navbar __navbart" role="navigation">
@@ -14,7 +14,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="http://vima.com.ng"><img src="assets/img/vima_logo.svg" class="__logoimg"></a>
+                        <a class="navbar-brand" href="{{'/'}}">Expenser</a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -46,6 +46,7 @@
                                     <h2>Calculate expense seemlessly</h2>
 
                                     <p>Let us handle your expenses, while you take a nap.You can be sure that all your expenses are well accounted for. Log in to see all your expenses. And guess what, you can convert from EUR to GBP</p>
+                                    <a href="{{url('expenses')}}" class="btn btn-primary">Start Now</a>
                                 </section>
                                 
 

@@ -17,21 +17,22 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container ">
     <div class="row justify-content-center">
         <div class="col-md-8">
-        <div class="container">
+        <div class="container color-blue-light">
             <div class="row col-md-12 col-md-offset-2 custyle">
-                <table class="table table-striped custab">
+                <table class="table  custab">
                     <thead>
                     <!-- <a href="#" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new categories</a> -->
                         <tr>
                             <th>ID</th>
                             
                             <th>Value</th>
+                            <th>VAT</th>
                             <th>Reason</th>
                             <th>Date</th>
-                            <th class="text-center">Action</th>
+                            <!-- <th class="text-center">Action</th> -->
                         </tr>
                     </thead>
 
@@ -40,9 +41,10 @@
                             <td>{{$expense->id}}</td>
                             
                             <td>{{$expense->value}}</td>
+                            <td>{{$expense->vat}}</td>
                             <td>{{$expense->reason}}</td>
                             <td>{{Carbon\Carbon::parse($expense->date)->diffForHumans() }} <td>
-                            <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+                            <!-- <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td> -->
                         </tr>
 
                         @endforeach
