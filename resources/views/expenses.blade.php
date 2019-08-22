@@ -22,6 +22,7 @@
         <div class="col-md-8">
         <div class="container color-blue-light">
             <div class="row col-md-12 col-md-offset-2 custyle">
+                @if(count($expenses) > 0)
                 <table class="table  custab">
                     <thead>
                     <!-- <a href="#" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new categories</a> -->
@@ -51,6 +52,11 @@
 
 
                 </table>
+
+                @else
+                <p>There are no expenses yet. Seems you've got all the cash well stacked</p>
+
+                @endif
             </div>
         </div>
         </div>
