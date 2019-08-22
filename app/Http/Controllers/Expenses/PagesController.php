@@ -31,20 +31,20 @@ class PagesController extends Controller
         if($auth == null)
         {
             Session::put('redirect', 'expenses');
-            
+
             return redirect('login');
         }  
         
         
         $user = Auth::user()->id;
 
-        $expenses = $this->expense->where('userId', $user)->get();
+        $expenses = $this->expense->where('userId', $user)->latest()->get();
 
         $data = [
-            'expenses' => $expenses
+            'expenses' => $expenses->toArray()
         ];
 
-        //dd($data);
+       // dd($data);
 
         return view('expenses', $data);
     }

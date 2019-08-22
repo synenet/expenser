@@ -25,27 +25,27 @@
                 @if(count($expenses) > 0)
                 <table class="table  custab">
                     <thead>
-                    <!-- <a href="#" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new categories</a> -->
+
                         <tr>
                             <th>ID</th>
                             
-                            <th>Value</th>
-                            <th>VAT</th>
+                            <th>Value (&pound;)</th>
+                            <th>VAT (&pound;)</th>
                             <th>Reason</th>
                             <th>Date</th>
-                            <!-- <th class="text-center">Action</th> -->
+
                         </tr>
                     </thead>
 
                         @foreach($expenses as $expense)
                         <tr>
-                            <td>{{$expense->id}}</td>
+                            <td> {{array_search($expense, $expenses) + 1}} </td>
                             
-                            <td>{{$expense->value}}</td>
-                            <td>{{$expense->vat}}</td>
-                            <td>{{$expense->reason}}</td>
-                            <td>{{Carbon\Carbon::parse($expense->date)->diffForHumans() }} <td>
-                            <!-- <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td> -->
+                            <td>{{$expense['value']}}</td>
+                            <td>{{$expense['vat']}}</td>
+                            <td>{{$expense['reason']}}</td>
+                            <td>{{Carbon\Carbon::parse($expense['date'])->diffForHumans() }} <td>
+
                         </tr>
 
                         @endforeach
@@ -78,7 +78,7 @@
                     
                 </div>
 
-                <div class="modal-body __modal-body ">
+                <div class="modal-body  ">
                     
                         @csrf()
                         <div class="form-group">
@@ -86,15 +86,15 @@
                             <input required class="form-control" name="date" type="date">
                         </div>
 
-                        <div class="form-group">
-                            <label for="">Value</label>
+                        <div class="form-group value">
+                            <label for="">Value<span style="position:absolute" class=" text-success text-small desc"></span></label>
                             <div class="row">
                                 <div class="col-10">
                                 <input required id="textValue" class="form-control" name="value" type="text">
-                                <span style="position:absolute" class=" text-success text-small desc"></span>
+                                
                                 </div>
 
-                                <div class="col-2" style="background:#1E3250;color:#fff;padding:5px"><p>&pound;</p></div>
+                                <div class="col-2" style="font-size:1em;background:#1E3250;color:#fff;"><p class="pounds">Pounds(&pound;)</p></div>
                             </div>
                             
                         </div>

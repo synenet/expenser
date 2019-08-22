@@ -36,3 +36,12 @@ nav{
     background: url('../img/back.png') !important;
 }
 
+.pounds{
+    margin-top:7px;
+    margin-right:3px
+}
+
+.desc{
+    margin-left:10px;
+    font-size:14px
+}
