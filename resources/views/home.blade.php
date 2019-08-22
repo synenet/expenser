@@ -14,7 +14,9 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Welcome, add you first expense
+
+                    <a href="{{url('expenses')}}" class="btn btn-primary btn-sm">Start Now</a>
                 </div>
             </div>
         </div>
