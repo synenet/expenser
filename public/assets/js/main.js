@@ -23,7 +23,7 @@ function updateEuros(value){
             //returns the round-up rate of conversion
             $('.desc').html("<p>*Converted Value at a rate of 1 : " +json.rates.GBP +"</p>")
 
-            $('')
+        
 
             
         }
@@ -31,7 +31,7 @@ function updateEuros(value){
 
     //console.log(converted)
 
-    return converted;
+    //return converted;
 }
 
 
@@ -50,23 +50,31 @@ $(document).ready(function(){
         let avail = text.search('EUR')
 
         //appends the tax value
-        let VAT = Number(text * 0.2)
+        
 
-        $('.value').append('<small class="text-primary ">VAT: '+ VAT + ' &pound; (20%)</small>');
+        
 
 
         //checks if EUR is typed
         if(avail > 0 ){
             let textSplit, newText
+
             textSplit = text.split(' ')
 
             newText = textSplit[0];
 
             let newVal = updateEuros(newText);
 
+            text = newText
 
             $(this).val(newVal) 
         }
+
+        
+        let VAT = Number(text * 0.2)
+        
+
+        $('.value').append('<small class="text-primary ">VAT: '+ VAT + ' &pound; (20%)</small>');
     
     });
 
