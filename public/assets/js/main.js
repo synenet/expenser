@@ -12,7 +12,9 @@ function updateEuros(value){
            // alert(json.rates.GBP * value);
            // return  (json.rates.GBP * value)     
             
-            converted = Math.round(Json.rates.GBP * value )
+            let converted = json.rates.GBP * value 
+
+            converted = Math.round(converted)
 
             console.log(converted)
 
