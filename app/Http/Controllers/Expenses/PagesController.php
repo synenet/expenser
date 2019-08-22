@@ -55,7 +55,7 @@ class PagesController extends Controller
                 
                 $body = $request->except(['_token', 'submit']);
              
-                //dd($body) ;
+                
                 $body['vat'] = $body['value'] * 0.2;
 
                 $this->expense->create($body);

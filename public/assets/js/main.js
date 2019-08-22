@@ -18,8 +18,8 @@ function updateEuros(value){
 
             $('#textValue').val(converted)
 
-            //returns the rate of conversion
-            $('.desc').html("<p>*Converted Value at a rate of 1 : " + json.rates.GBP +"</p>")
+            //returns the round-up rate of conversion
+            $('.desc').html("<p>*Converted Value at a rate of 1 : " + Math.round(json.rates.GBP) +"</p>")
 
             $('')
 
@@ -36,7 +36,7 @@ function updateEuros(value){
 
 
 
-//console.log(text);
+
 
 $(document).ready(function(){
 
@@ -62,7 +62,6 @@ $(document).ready(function(){
 
             let newVal = updateEuros(newText);
 
-            console.log(newVal)
 
             $(this).val(newVal) 
         }
