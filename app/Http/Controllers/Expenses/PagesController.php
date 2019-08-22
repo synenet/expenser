@@ -51,7 +51,7 @@ class PagesController extends Controller
  
      public function addExpense(Request $request)
      {
-         try {
+        //  try {
                 
                 $body = $request->except(['_token', 'submit']);
              
@@ -63,10 +63,10 @@ class PagesController extends Controller
                  Session::put('green', true);
                  return redirect()->back()->withErrors('Expense added successfully');
 
-         } catch (\Exception $e) {
-             Session::put('red', true);
-             return redirect()->back()->withErrors('Expense could not be added');
-         }
+        //  } catch (\Exception $e) {
+        //      Session::put('red', true);
+        //      return redirect()->back()->withErrors('Expense could not be added');
+        //  }
      }
 
  
